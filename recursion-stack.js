@@ -30,3 +30,53 @@ function factorial(factor) {
 }
 console.log(factorial(5));
 
+
+
+
+// Задача 3
+
+function fib(n){
+  if(n <= 1) return n;
+  return fib(n-1) + fib(n-2)
+}
+
+console.log(fib(7))
+
+
+// Задача 4
+
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+
+function printList(list){
+    console.log(list.value)
+    if(list.next){
+      printList(list.next)
+    }
+}
+
+printList(list)
+
+
+// Задача 5
+
+function printReverseList(list){
+  if(list.next){
+    printReverseList(list.next)
+  }
+  console.log(list.value)
+
+}
+
+printReverseList(list)
